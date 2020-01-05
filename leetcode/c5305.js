@@ -47,6 +47,8 @@ function bfs(videos, friends, id, level, ans) {
       if (friend.state === 'W') {
         friend.state = 'G';
         friend.val = curr.val+1;
+
+        /* PUSH THIS - FIFO (instead of LIFO) */
         q.push(f);
       }
     });
